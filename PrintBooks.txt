@@ -1,0 +1,12 @@
+Author; Title; Genre; Publisher; Year Of Publication; ISBN; Number Of Pages; Total Sales
+
+Jamie Oliver ; Everyday Super Food; Food & Drink; Michael Joseph ; 2015; 0718181239; 312; 71140 
+ Steven Gerrard; My Story; Biography ;Penguin; 2015; 1405923385;496; 77231
+Paula Hawkins; The Girl on the Train;Crime, Thrillers & Mystery;Doubleday ;2015;   0857522310; 320; 57168
+Gillian Flynn ;Gone Girl;  Crime,Thrillers & Mystery ;W&N; 2014; 1780228228;  512; 97231
+Joe Sugg;Username: Evie;  Comics & Graphic Novels;Hodder & Stoughton ;2015 ; 1473619130;  192; 16323
+ Terry Pratchett; The Shepherd's Crown;Science Fiction & Fantasy ;Doubleday Childrens; 2015;  0857534815; 352; 88316
+Driver and Vehicle Standards Agency; The official highway code; Business, Finance & Law;Stationery Office; 2015;   0115533427; 152;13204 
+Warner Brothers; Harry Potter Colouring Book;  Science Fiction & Fantasy;Studio Press ;2015; 1783705485;  96; 9167
+Guinness World Records ; Guinness World Records 2016; Almanacs & Yearbooks;Guinness World Records Limited; 2015; 1910561010;  256; 79918
+F. Scott Fitzgerald; The Great Gatsby;  Classics ;Wordsworth Editions;1992; 978-1853260414;  144; 60038
