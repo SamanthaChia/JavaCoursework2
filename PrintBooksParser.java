@@ -40,8 +40,15 @@ public class PrintBooksParser {
 		return in;
 	}
 
-	private static PrintBook parsePrintBook(String line) {
+	private static PrintBook parsePrintBook(String line){
 		//statements missing
+		line = line.trim();
+		String[] splitLine = line.split(";");
+		for(String a : splitLine){
+			PrintBook pb = a;
+		}
+		return pb;
+		
 	}
 	
 	public static void display(List<PrintBook> pBooks){
