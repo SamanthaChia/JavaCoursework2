@@ -42,13 +42,13 @@ public class PrintBooksParser {
 
 	private static PrintBook parsePrintBook(String line){
 		//statements missing
+		PrintBook pb;
 		line = line.trim();
 		String[] splitLine = line.split(";");
 		for(String a : splitLine){
-			PrintBook pb = a;
+			pb = a;
 		}
 		return pb;
-		
 	}
 	
 	public static void display(List<PrintBook> pBooks){
