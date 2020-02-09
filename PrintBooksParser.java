@@ -17,6 +17,7 @@ public class PrintBooksParser {
 		List<PrintBook> printBooks = new ArrayList<PrintBook>();
 		while(in.hasNextLine()) {
 			String line = in.nextLine();
+			line = line.trim(); //remove extra space
 			PrintBook pBook = parsePrintBook(line);
 			printBooks.add(pBook);
 		}
@@ -43,12 +44,12 @@ public class PrintBooksParser {
 	private static PrintBook parsePrintBook(String line){
 		//statements missing
 		PrintBook pb;
-		line = line.trim();
-		String[] splitLine = line.split(";");
-		for(String a : splitLine){
+		String[] splitLine = line.split(";"); //split the words
+		for(String a : splitLine){ // for each string in split
 			pb = a;
 		}
 		return pb;
+
 	}
 	
 	public static void display(List<PrintBook> pBooks){
