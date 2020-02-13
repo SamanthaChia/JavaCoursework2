@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class PrintBooksParser {
 	
-	private PrintBooksParser(){}
+	private PrintBooksParser(){
+		
+	}
 
 	public static List<PrintBook> parsePrintBookFile(String filename) {
 		Scanner in = getScanner(filename);
@@ -40,8 +41,22 @@ public class PrintBooksParser {
 		return in;
 	}
 
-	private static PrintBook parsePrintBook(String line) {
+	private static PrintBook parsePrintBook(String line){
 		//statements missing
+		String[] data = line.split(";"); //split the words
+		for(int i=0;i<data.length;i++){
+			data[i] = data[i].trim();
+		}
+		String author = data[0];
+		String title = data[1];
+		String genre = data[2];
+		String publisher = data[3];
+		int yearOfPub = Integer.parseInt(data[4]);
+		String isbn = data[5];
+		int noOfPages = Integer.parseInt(data[6]);
+		PrintBook pb = new PrintBook(author, title, genre, publisher, yearOfPub, isbn, noOfPages);
+		
+		return pb;
 	}
 	
 	public static void display(List<PrintBook> pBooks){
