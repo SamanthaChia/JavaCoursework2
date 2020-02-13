@@ -45,26 +45,33 @@ public class AudioBooksParser{
     }
 
     private static AudioBook parseAudioBook(String line){
-        String[] data = PrintBooksParser.splitTrimArray(line);
+        String[] data = PrintBooksParser.splitTrimArrayFromText(line);
 
         String author = data[0];
         String title = data[1];
         String genre = data[2];
         String publisher = data[3];
-        int yearOfPub = Integer.parseInt(data[4]);
         String asin = data[5];
         String narrator = data[6];
-
-        String[] timeData = data[7].split(" ");
-        int hours = Integer.parseInt(timeData[0]);
-        int minutes = Integer.parseInt(timeData[3]);
-        Duration listenTime = new Duration(hours, minutes);
+        int yearOfPub = Integer.parseInt(data[4]);
         int totalSales = Integer.parseInt(data[8]);
+        
+        Duration listenTime = parseDuration(data);
+        
 
         AudioBook ab = new AudioBook(author, title, genre, publisher, yearOfPub, asin, narrator, listenTime);
         ab.setSales(totalSales);
         
         return ab;
+    }
+
+    private static Duration parseDuration(String[] data){
+        String[] timeData = data[7].split(" ");
+        int hours = Integer.parseInt(timeData[0]);
+        int minutes = Integer.parseInt(timeData[3]);
+        Duration listenTime = new Duration(hours, minutes);
+
+        return listenTime;
     }
 
 	public static void display(List<AudioBook> aBooks){

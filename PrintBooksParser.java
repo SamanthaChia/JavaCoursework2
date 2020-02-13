@@ -48,7 +48,7 @@ public class PrintBooksParser {
 
 	private static PrintBook parsePrintBook(String line){
 		//statements missing
-		String[] data = splitTrimArray(line);
+		String[] data = splitTrimArrayFromText(line);
 
 		String author = data[0];
 		String title = data[1];
@@ -64,7 +64,7 @@ public class PrintBooksParser {
 		return pb;
 	}
 
-	public static String[] splitTrimArray(String line){
+	public static String[] splitTrimArrayFromText(String line){
         String[] data = line.split(";");
         for(int i=0;i<data.length;i++){
             data[i] = data[i].trim();
