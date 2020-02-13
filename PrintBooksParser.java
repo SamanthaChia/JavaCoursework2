@@ -1,3 +1,8 @@
+// Name: Samantha Chia Eileen 
+// Student Number: 190428594
+// Course Number : CO1109
+// Coursework 2
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -43,10 +48,8 @@ public class PrintBooksParser {
 
 	private static PrintBook parsePrintBook(String line){
 		//statements missing
-		String[] data = line.split(";"); //split the words
-		for(int i=0;i<data.length;i++){
-			data[i] = data[i].trim();
-		}
+		String[] data = splitTrimArrayFromText(line);
+
 		String author = data[0];
 		String title = data[1];
 		String genre = data[2];
@@ -54,10 +57,21 @@ public class PrintBooksParser {
 		int yearOfPub = Integer.parseInt(data[4]);
 		String isbn = data[5];
 		int noOfPages = Integer.parseInt(data[6]);
+		int totalSales = Integer.parseInt(data[7]);
+
 		PrintBook pb = new PrintBook(author, title, genre, publisher, yearOfPub, isbn, noOfPages);
-		
+		pb.setSales(totalSales);
 		return pb;
 	}
+
+	public static String[] splitTrimArrayFromText(String line){
+        String[] data = line.split(";");
+        for(int i=0;i<data.length;i++){
+            data[i] = data[i].trim();
+        }
+
+        return data;
+    }
 	
 	public static void display(List<PrintBook> pBooks){
 		for(PrintBook pb : pBooks)

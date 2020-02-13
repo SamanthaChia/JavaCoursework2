@@ -2,8 +2,8 @@ import java.util.List;
 
 public class Main {
 
+	//Tested and works like how I had expected it to. 
 	public static void main(String[] args) {
-		// !!!! not done yet.
 		List<PrintBook> pBooks = PrintBooksParser.parsePrintBookFile("PrintBooks.txt");
 		PrintBooksParser.display(pBooks);
 		

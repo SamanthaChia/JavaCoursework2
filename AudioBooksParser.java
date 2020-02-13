@@ -1,3 +1,8 @@
+// Name: Samantha Chia Eileen 
+// Student Number: 190428594
+// Course Number : CO1109
+// Coursework 2
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -40,26 +45,34 @@ public class AudioBooksParser{
     }
 
     private static AudioBook parseAudioBook(String line){
-        String[] data = line.split(";");
-        for(int i=0;i<data.length;i++){
-            data[i] = data[i].trim();
-        }
+        //Split the text and trim access space.
+        String[] data = PrintBooksParser.splitTrimArrayFromText(line);
 
         String author = data[0];
         String title = data[1];
         String genre = data[2];
         String publisher = data[3];
-        int yearOfPub = Integer.parseInt(data[4]);
         String asin = data[5];
         String narrator = data[6];
+        int yearOfPub = Integer.parseInt(data[4]);
+        int totalSales = Integer.parseInt(data[8]);
+        // create Duration for AudioBook
+        Duration listenTime = parseDuration(data);
+        
 
+        AudioBook ab = new AudioBook(author, title, genre, publisher, yearOfPub, asin, narrator, listenTime);
+        ab.setSales(totalSales);
+        
+        return ab;
+    }
+
+    private static Duration parseDuration(String[] data){
         String[] timeData = data[7].split(" ");
         int hours = Integer.parseInt(timeData[0]);
         int minutes = Integer.parseInt(timeData[3]);
         Duration listenTime = new Duration(hours, minutes);
 
-        AudioBook ab = new AudioBook(author, title, genre, publisher, yearOfPub, asin, narrator, listenTime);
-        return ab;
+        return listenTime;
     }
 
 	public static void display(List<AudioBook> aBooks){
