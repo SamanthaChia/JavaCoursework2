@@ -56,4 +56,10 @@ public class AudioBooksParser{
         }
     }
 
+    public static void main(String[] args) {
+		//main for testing this class
+		List<AudioBook> aBooks = AudioBooksParser.parseAudioBookFile();
+		display(aBooks);
+	}
+
 }
