@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class PrintBooksParser {
 	
-	private PrintBooksParser(){}
+	private PrintBooksParser(){
+		
+	}
 
 	public static List<PrintBook> parsePrintBookFile(String filename) {
 		Scanner in = getScanner(filename);
@@ -17,7 +18,6 @@ public class PrintBooksParser {
 		List<PrintBook> printBooks = new ArrayList<PrintBook>();
 		while(in.hasNextLine()) {
 			String line = in.nextLine();
-			line = line.trim(); //remove extra space
 			PrintBook pBook = parsePrintBook(line);
 			printBooks.add(pBook);
 		}
@@ -43,13 +43,18 @@ public class PrintBooksParser {
 
 	private static PrintBook parsePrintBook(String line){
 		//statements missing
-		PrintBook pb;
-		String[] splitLine = line.split(";"); //split the words
-		for(String a : splitLine){ // for each string in split
-			pb = a;
-		}
+		line = line.trim(); //remove extra space
+		String[] data = line.split(";"); //split the words
+		String author = data[0];
+		String title = data[1];
+		String genre = data[2];
+		String publisher = data[3];
+		int yearOfPub = Integer.parseInt(data[4]);
+		String isbn = data[5];
+		int noOfPages = Integer.parseInt(data[6]);
+		PrintBook pb = new PrintBook(author, title, genre, publisher, yearOfPub, isbn, noOfPages);
+		
 		return pb;
-
 	}
 	
 	public static void display(List<PrintBook> pBooks){
