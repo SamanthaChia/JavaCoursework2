@@ -43,8 +43,10 @@ public class PrintBooksParser {
 
 	private static PrintBook parsePrintBook(String line){
 		//statements missing
-		line = line.trim(); //remove extra space
 		String[] data = line.split(";"); //split the words
+		for(int i=0;i<data.length;i++){
+			data[i] = data[i].trim();
+		}
 		String author = data[0];
 		String title = data[1];
 		String genre = data[2];
