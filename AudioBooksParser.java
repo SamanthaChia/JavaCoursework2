@@ -45,6 +45,7 @@ public class AudioBooksParser{
     }
 
     private static AudioBook parseAudioBook(String line){
+        //Split the text and trim access space.
         String[] data = PrintBooksParser.splitTrimArrayFromText(line);
 
         String author = data[0];
@@ -55,7 +56,7 @@ public class AudioBooksParser{
         String narrator = data[6];
         int yearOfPub = Integer.parseInt(data[4]);
         int totalSales = Integer.parseInt(data[8]);
-        
+        // create Duration for AudioBook
         Duration listenTime = parseDuration(data);
         
 
