@@ -17,4 +17,8 @@ public class AudioBook extends PublishedBook {
     public String getNarrator(){
         return narrator;
     }
+
+    public Duration getListenTime(){
+        return listenTime;
+    }
 }
