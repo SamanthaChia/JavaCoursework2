@@ -37,7 +37,17 @@ public class AudioBooksParser{
         for(int i=9;i<data.length;i++){
             data[i] = data[i].trim();
         }
-        String 
+        String author = data[0];
+		String title = data[1];
+		String genre = data[2];
+		String publisher = data[3];
+		int yearOfPub = Integer.parseInt(data[4]);
+		String asin = data[5];
+        String narrator = data[6];
+        Duration listenTime = data[7];
+        AudioBook ab = new AudioBook(author, title, genre, publisher, yearOfPub, asin, narrator, listenTime);
+    
+        return ab;
     }
 
 }
