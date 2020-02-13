@@ -11,7 +11,7 @@ public class Main {
 		System.out.println("/****************************************************/");
 		System.out.println();
 		
-		// List<AudioBook> aBooks = AudioBooksParser.parseAudioBookFile("AudioBooks.txt");
-		// AudioBooksParser.display(aBooks);
+		List<AudioBook> aBooks = AudioBooksParser.parseAudioBookFile("AudioBooks.txt");
+		AudioBooksParser.display(aBooks);
 	}
 }
