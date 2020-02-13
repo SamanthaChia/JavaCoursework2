@@ -24,9 +24,9 @@ public class AudioBook extends PublishedBook {
 
     public String toString(){
         String s = super.toString();
-		s += String.format("Asin: %s%n", asin);
-        s += String.format("Narrator: %d%n", narrator);
-        s += String.format("Listen Time: %d%n", listenTime);
+		s += String.format("ASIN: %s%n", asin);
+        s += String.format("Narrator: %s%n", narrator);
+        s += String.format("Listen Time: %s%n", listenTime);
 		return s;
     }
 }

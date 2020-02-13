@@ -1,4 +1,3 @@
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -38,40 +37,40 @@ public class AudioBooksParser{
 		in.nextLine();
 		
 		return in;
-	}
+    }
 
     private static AudioBook parseAudioBook(String line){
         String[] data = line.split(";");
         for(int i=0;i<data.length;i++){
             data[i] = data[i].trim();
         }
+
         String author = data[0];
-		String title = data[1];
-		String genre = data[2];
-		String publisher = data[3];
-		int yearOfPub = Integer.parseInt(data[4]);
-		String asin = data[5];
+        String title = data[1];
+        String genre = data[2];
+        String publisher = data[3];
+        int yearOfPub = Integer.parseInt(data[4]);
+        String asin = data[5];
         String narrator = data[6];
 
         String[] timeData = data[7].split(" ");
         int hours = Integer.parseInt(timeData[0]);
         int minutes = Integer.parseInt(timeData[3]);
         Duration listenTime = new Duration(hours, minutes);
+
         AudioBook ab = new AudioBook(author, title, genre, publisher, yearOfPub, asin, narrator, listenTime);
-    
         return ab;
     }
 
-    public static void display(List<AudioBook> aBooks){
-        for(AudioBook ab : aBooks){
+	public static void display(List<AudioBook> aBooks){
+		for(AudioBook ab : aBooks){
             System.out.println(ab);
         }
-    }
-
-    public static void main(String[] args) {
-		//main for testing this class
-		List<AudioBook> aBooks = AudioBooksParser.parseAudioBookFile("AudioBooks.txt");
-		System.out.println(aBooks);
 	}
-
+    
+    public static void main(String[] args) {
+        //main for testing this class
+        List<AudioBook> aBooks = Testing.parseAudioBookFile("AudioBooks.txt");
+        display(aBooks);
+	}
 }
