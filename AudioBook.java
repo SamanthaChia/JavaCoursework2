@@ -13,4 +13,8 @@ public class AudioBook extends PublishedBook {
     public String getAsn(){
         return asn;
     }
+
+    public String getNarrator(){
+        return narrator;
+    }
 }
