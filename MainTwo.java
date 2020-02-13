@@ -1,10 +1,17 @@
 import java.util.List;
+import java.util.Scanner;
 
-public class Main {
+public class MainTwo {
 
 	public static void main(String[] args) {
 		// !!!! not done yet.
-		List<PrintBook> pBooks = PrintBooksParser.parsePrintBookFile("PrintBooks.txt");
+		List<PrintBook> pBooks = PrintBooksParser.parsePrintBookFile("PrintBook123s.txt");
+		while(pBooks == null){
+			Scanner kb = new Scanner(System.in);
+			System.out.print("File doesn't exist, please enter a valid file name : ");
+			String filename = kb.nextLine();
+			pBooks = PrintBooksParser.parsePrintBookFile(filename);
+		}
 		PrintBooksParser.display(pBooks);
 		
 		System.out.println();
