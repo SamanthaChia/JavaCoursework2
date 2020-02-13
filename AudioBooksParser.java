@@ -50,4 +50,10 @@ public class AudioBooksParser{
         return ab;
     }
 
+    public static void display(List<AudioBook> aBooks){
+        for(AudioBook ab : aBooks){
+            System.out.println(ab);
+        }
+    }
+
 }
