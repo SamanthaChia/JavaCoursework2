@@ -67,10 +67,4 @@ public class AudioBooksParser{
             System.out.println(ab);
         }
 	}
-    
-    public static void main(String[] args) {
-        //main for testing this class
-        List<AudioBook> aBooks = AudioBooksParser.parseAudioBookFile("AudioBooks.txt");
-        display(aBooks);
-	}
 }
