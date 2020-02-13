@@ -54,8 +54,10 @@ public class PrintBooksParser {
 		int yearOfPub = Integer.parseInt(data[4]);
 		String isbn = data[5];
 		int noOfPages = Integer.parseInt(data[6]);
+		int totalSales = Integer.parseInt(data[7]);
+
 		PrintBook pb = new PrintBook(author, title, genre, publisher, yearOfPub, isbn, noOfPages);
-		
+		pb.setSales(totalSales);
 		return pb;
 	}
 	

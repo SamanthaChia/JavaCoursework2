@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class MainTwo {
 
 	public static void main(String[] args) {
-		// !!!! not done yet.
 		List<PrintBook> pBooks = PrintBooksParser.parsePrintBookFile("PrintBook123s.txt");
 		while(pBooks == null){
 			Scanner kb = new Scanner(System.in);
