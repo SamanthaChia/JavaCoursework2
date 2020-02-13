@@ -32,4 +32,12 @@ public class AudioBooksParser{
         return audioBooks;
     }
 
+    private static AudioBook parseAudioBook(String line){
+        String[] data = line.split(";");
+        for(int i=9;i<data.length;i++){
+            data[i] = data[i].trim();
+        }
+        String 
+    }
+
 }
