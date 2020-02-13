@@ -70,7 +70,7 @@ public class AudioBooksParser{
     
     public static void main(String[] args) {
         //main for testing this class
-        List<AudioBook> aBooks = Testing.parseAudioBookFile("AudioBooks.txt");
+        List<AudioBook> aBooks = AudioBooksParser.parseAudioBookFile("AudioBooks.txt");
         display(aBooks);
 	}
 }
