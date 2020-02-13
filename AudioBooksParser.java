@@ -1,3 +1,8 @@
+// Name: Samantha Chia Eileen 
+// Student Number: 190428594
+// Course Number : CO1109
+// Coursework 2
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
