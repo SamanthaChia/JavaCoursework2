@@ -48,10 +48,8 @@ public class PrintBooksParser {
 
 	private static PrintBook parsePrintBook(String line){
 		//statements missing
-		String[] data = line.split(";"); //split the words
-		for(int i=0;i<data.length;i++){
-			data[i] = data[i].trim();
-		}
+		String[] data = splitTrimArray(line);
+
 		String author = data[0];
 		String title = data[1];
 		String genre = data[2];
@@ -65,6 +63,15 @@ public class PrintBooksParser {
 		pb.setSales(totalSales);
 		return pb;
 	}
+
+	public static String[] splitTrimArray(String line){
+        String[] data = line.split(";");
+        for(int i=0;i<data.length;i++){
+            data[i] = data[i].trim();
+        }
+
+        return data;
+    }
 	
 	public static void display(List<PrintBook> pBooks){
 		for(PrintBook pb : pBooks)

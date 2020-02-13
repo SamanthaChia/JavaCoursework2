@@ -45,10 +45,7 @@ public class AudioBooksParser{
     }
 
     private static AudioBook parseAudioBook(String line){
-        String[] data = line.split(";");
-        for(int i=0;i<data.length;i++){
-            data[i] = data[i].trim();
-        }
+        String[] data = PrintBooksParser.splitTrimArray(line);
 
         String author = data[0];
         String title = data[1];
