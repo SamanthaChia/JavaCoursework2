@@ -57,8 +57,11 @@ public class AudioBooksParser{
         int hours = Integer.parseInt(timeData[0]);
         int minutes = Integer.parseInt(timeData[3]);
         Duration listenTime = new Duration(hours, minutes);
+        int totalSales = Integer.parseInt(data[8]);
 
         AudioBook ab = new AudioBook(author, title, genre, publisher, yearOfPub, asin, narrator, listenTime);
+        ab.setSales(totalSales);
+        
         return ab;
     }
 
