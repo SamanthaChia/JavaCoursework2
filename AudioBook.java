@@ -10,4 +10,7 @@ public class AudioBook extends PublishedBook {
         this.listenTime = listenTime;
     }
     
+    public String getAsn(){
+        return asn;
+    }
 }
