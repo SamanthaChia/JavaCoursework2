@@ -21,4 +21,12 @@ public class AudioBook extends PublishedBook {
     public Duration getListenTime(){
         return listenTime;
     }
+
+    public String toString(){
+        String s = super.toString();
+		s += String.format("Asn: %s%n", asn);
+        s += String.format("Narrator: %d%n", narrator);
+        s += String.format("Listen Time: %d%n", listenTime);
+		return s;
+    }
 }
