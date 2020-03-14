@@ -9,10 +9,10 @@ import java.util.Scanner;
 public class MainTwo {
 
 	public static void main(String[] args) {
-		List<PrintBook> pBooks = PrintBooksParser.parsePrintBookFile("PrintBook123s.txt");
+		List<PrintBook> pBooks = null;
 		while(pBooks == null){
 			Scanner kb = new Scanner(System.in);
-			System.out.print("File doesn't exist, please enter a valid file name : ");
+			System.out.print("Please enter a valid file name : ");
 			String filename = kb.nextLine();
 			pBooks = PrintBooksParser.parsePrintBookFile(filename);
 		}
